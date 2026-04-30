@@ -29,3 +29,17 @@ export default {
   }
 }
 </script>
+<style>
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  width: 220px;
+  border-radius: 10px;
+  font-family: Arial;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+</style>
