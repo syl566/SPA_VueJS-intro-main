@@ -12,21 +12,7 @@
 
 <script>
 export default {
-  data() {
-    return {
-      city: {
-        name: 'Ma ville',
-        weather: 'Peu nuageux',
-        temperature: 20.55,
-        updatedAt: new Date()
-      }
-    }
-  },
-  methods: {
-    formatDate(date) {
-      return new Date(date).toLocaleString()
-    }
-  }
+  props: ['city.name', 'city.weather', 'city.temperature', 'city.updatedAt']
 }
 </script>
 <style>

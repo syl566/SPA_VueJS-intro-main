@@ -5,7 +5,12 @@
 </template>
 
 <script>
+import City from '../components/City.vue'
+
 export default {
-  name: 'CitiesList'
+  props: ['name', 'weather', 'temperature', 'updatedAt'],
+  components: { City }
 }
+
+
 </script>
