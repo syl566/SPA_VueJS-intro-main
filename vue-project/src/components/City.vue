@@ -1,6 +1,5 @@
 <template>
   <div class="card">
-    <h1>Météo - Détail d'une ville</h1>
 
     <h2>{{ city.name }}</h2>
     <p>{{ city.weather }}</p>
@@ -12,20 +11,34 @@
 
 <script>
 export default {
-  props: ['city.name', 'city.weather', 'city.temperature', 'city.updatedAt']
+  props: {
+    city: {
+      type: Object,
+      required: true
+    }
+  },
+  methods: {
+    formatDate(date) {
+      return new Date(date).toLocaleString()
+    }
+  }
 }
 </script>
 <style>
 .card {
-  border: 1px solid #ccc;
-  padding: 16px;
-  width: 220px;
-  border-radius: 10px;
   font-family: Arial;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
+
+
+
 
 h2 {
   margin-bottom: 10px;
+
 }
 </style>
